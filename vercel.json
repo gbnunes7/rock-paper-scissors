@@ -8,10 +8,15 @@
       {
         "src": "assets/**/*",
         "use": "@vercel/static"
+      },
+      {
+        "src": "components/**/*",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
       { "src": "/", "dest": "/src/index.html" },
-      { "src": "/assets/(.*)", "dest": "/assets/$1" }
+      { "src": "/assets/(.*)", "dest": "/assets/$1" },
+      { "src": "/components/(.*)", "dest": "/components/$1" }
     ]
   }
