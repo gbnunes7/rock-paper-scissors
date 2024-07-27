@@ -6,18 +6,14 @@
     <title>Rock Paper and Scissors</title>
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="/components/modal.js" defer></script>
-    <script type="module" src="/components/game.js" defer></script>
-    <script type="module" src="/components/selection.js" defer></script>
     <script type="module" src="/components/dom.js" defer></script>
-    <script type="module" src="/components/machineSelection.js" defer></script>
-
-
+    <script type="module" src="/components/modal.js" defer></script>
+    <script type="module" src="/components/btnNewAndTry.js" defer></script>
 
 </head>
 <body class='flex flex-col min-h-screen'>
     <header class="bg-blue-200 py-6 px-24 ">
-        <h1 class="text-5xl my-6">Rock Paper and Scissors</h1>
+        <h1 class="text-5xl my-6 font-bold">Rock Paper and Scissors</h1>
     </header>
     <main class="flex-grow flex flex-col items-center text-center">
         <h2 class="text-4xl mt-20 mb-10 font-semibold">Choose one:</h3>
@@ -37,8 +33,7 @@
         </div>
 
          <div class="my-32 flex gap-12">
-            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">New Game</button>
-            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">Try Again</button>
+            <button id="button__new--game" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">New Game</button>
         </div>
 
         
@@ -47,8 +42,8 @@
         <button id="modal-open" class='bg-orange-500 text-white px-4 rounded my-6 py-2 rounded hover:bg-orange-600 text-xl'>View rules</button>
         <div class="border-2 border-black rounded py-4 px-8 flex flex-col gap-2 items-center">
             <h3 class="text-2xl font-semibold">Score:</h3>
-            <p class="text-xl">User: <span class="ml-9">0</span></p>
-            <p class="text-xl">Machine: <span>0</span></p>
+            <span id="user__score" class="text-xl">User: 0</span>
+            <span class="text-xl" id="machine__score">Machine: 0</span>
         </div>
         <div class="esconder fade">
             <div class="modal bg-white rounded p-6">
