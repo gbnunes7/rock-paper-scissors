@@ -11,20 +11,20 @@
     <script type="module" src="/components/btnNew.js" defer></script>
 
 </head>
-<body class='flex flex-col min-h-screen'>
-    <header class="bg-blue-200 py-6 px-24 ">
+<body class="flex flex-col min-h-screen h-full overflow-hidden">
+    <header class="bg-blue-200 py-6 px-24">
         <h1 class="text-5xl my-6 font-bold">Rock Paper and Scissors</h1>
     </header>
     <main class="flex-grow flex flex-col items-center text-center">
-        <h2 class="text-4xl mt-20 mb-10 font-semibold">Choose one:</h3>
-        <section class="flex justify-center align-center gap-32 mt-28">    
+        <h2 class="text-4xl mt-20 mb-10 font-semibold">Choose one:</h2>
+        <section class="flex justify-center align-center gap-32 mt-10">    
             <button id="button__scissors"><img src="/assets/img/tesoura.png" alt="hand imitating scissors" class="w-40 transform transition-transform hover:scale-125"></button>
             <button id="button__rock"><img src="/assets/img/pedra.png" alt="hand imitating a rock" class="w-40 transform transition-transform hover:scale-125"></button>
-            <button id="button__paper" ><img src="/assets/img/papel.png" alt="hand imitating a paper" class="w-32 transform transition-transform hover:scale-125"></button>
+            <button id="button__paper"><img src="/assets/img/papel.png" alt="hand imitating a paper" class="w-32 transform transition-transform hover:scale-125"></button>
         </section>
-        
-        <div class="flex flex-col items-center w-full gap-4 mt-10 text-2xl font-semibold">
-            <div class="flex justify-center items-center gap-6 mb-4">
+
+        <div class="flex flex-col items-center w-full gap-4 text-2xl mt-10 font-semibold">
+            <div class="flex justify-center items-center gap-6">
                 <span id="userChoice" class="text-2xl font-semibold"></span>
                 <span id="vs" class="text-2xl font-bold"></span>
                 <span id="machineChoice" class="text-2xl font-semibold"></span>
@@ -32,32 +32,31 @@
             <span id="victory" class="text-3xl font-bold text-blue-600"></span>
         </div>
 
-         <div class="my-32 flex gap-12">
-            <button id="button__new--game" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">New Game</button>
+        <div class="flex gap-12 mt-20">
+            <button id="button__new--game"class="bg-blue-700 m text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">New Game</button>
         </div>
-
         
     </main>
-    <footer class="bg-blue-200 py-4 text-center flex justify-center gap-20">
-        <button id="modal-open" class='bg-orange-500 text-white px-4 rounded my-6 py-2 rounded hover:bg-orange-600 text-xl'>View rules</button>
-        <div class="border-2 border-black rounded py-4 px-8 flex flex-col gap-2 items-center">
+    <footer class="w-full bg-blue-200 text-center flex justify-center gap-20">
+        <button id="modal-open" class='modal-open bg-orange-500 text-white px-4 rounded my-6 py-2 rounded hover:bg-orange-600 text-xl'>View rules</button>
+        <div class="border-2 border-black rounded py-2 px-6 flex flex-col gap-2 items-center">
             <h3 class="text-2xl font-semibold">Score:</h3>
             <span id="user__score" class="text-xl">User: 0</span>
             <span class="text-xl" id="machine__score">Machine: 0</span>
         </div>
         <div class="esconder fade">
             <div class="modal bg-white rounded p-6">
-                    <div class="rules flex justify-between w-full">
-                        <h4 class="titulo text-2xl font-bold">Rules</h4>
-                        <button id="button__close">X</button>
-                    </div>
+                <div class="rules flex justify-between w-full">
+                    <h4 class="titulo text-2xl font-bold">Rules</h4>
+                    <button id="button__close">X</button>
+                </div>
                 <ul class="bg-blue-200 p-4 flex flex-col gap-2 rounded text-xl">
                     <li>- Rock wins against Scissors</li>
                     <li>- Scissors wins against paper</li>
-                    <li>- Paper wins againstt rock</li>
+                    <li>- Paper wins against rock</li>
                     <li>- If both players throw the same option, it is considered a tie.</li>
                     <li>- New game button is used to reset points</li>
-                    <li>- It's not permited to select rock twice in a row.</li>
+                    <li>- It's not permitted to select rock twice in a row.</li>
                     <li class="font-bold text-xl">I wish you good luck and a good game</li>
                 </ul>
             </div> 

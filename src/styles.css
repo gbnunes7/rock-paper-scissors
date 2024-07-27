@@ -28,3 +28,22 @@
     z-index: 5;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    padding: 10px
+}
