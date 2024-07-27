@@ -1,5 +1,5 @@
 export default function machineSelection () {
-    const options = ["rock","paper","scissors"]
+    const options = ["Rock","Paper","Scissors"]
     return options[getRandomNumber(((options.length)))]
 }
 
