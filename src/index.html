@@ -6,7 +6,13 @@
     <title>Rock Paper and Scissors</title>
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="/components/modal.js" defer></script>
+    <script type="module" src="/components/modal.js" defer></script>
+    <script type="module" src="/components/game.js" defer></script>
+    <script type="module" src="/components/selection.js" defer></script>
+    <script type="module" src="/components/dom.js" defer></script>
+    <script type="module" src="/components/machineSelection.js" defer></script>
+
+
 
 </head>
 <body class='flex flex-col min-h-screen'>
@@ -16,16 +22,20 @@
     <main class="flex-grow flex flex-col items-center text-center">
         <h2 class="text-4xl mt-20 mb-10 font-semibold">Choose one:</h3>
         <section class="flex justify-center align-center gap-32 mt-28">    
-            <button><img src="/assets/img/tesoura.png" alt="hand imitating scissors" class="w-40 transform transition-transform hover:scale-125"></button>
-            <button><img src="/assets/img/pedra.png" alt="hand imitating a rock" class="w-40 transform transition-transform hover:scale-125"></button>
-            <button><img src="/assets/img/papel.png" alt="hand imitating a paper" class="w-32 transform transition-transform hover:scale-125"></button>
+            <button id="button__scissors"><img src="/assets/img/tesoura.png" alt="hand imitating scissors" class="w-40 transform transition-transform hover:scale-125"></button>
+            <button id="button__rock"><img src="/assets/img/pedra.png" alt="hand imitating a rock" class="w-40 transform transition-transform hover:scale-125"></button>
+            <button id="button__paper" ><img src="/assets/img/papel.png" alt="hand imitating a paper" class="w-32 transform transition-transform hover:scale-125"></button>
         </section>
         
-        <!-- <div> -->
-            <!-- escolha usuário -->
-             <!-- x -->
-            <!-- escolha máquina -->
-        <!-- </div> -->
+        <div class="flex flex-col items-center w-full gap-4 mt-10 text-2xl font-semibold">
+            <div class="flex justify-center items-center gap-6 mb-4">
+                <span id="userChoice" class="text-2xl font-semibold"></span>
+                <span id="vs" class="text-2xl font-bold"></span>
+                <span id="machineChoice" class="text-2xl font-semibold"></span>
+            </div>
+            <span id="victory" class="text-3xl font-bold text-blue-600"></span>
+        </div>
+
          <div class="my-32 flex gap-12">
             <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">New Game</button>
             <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 text-xl">Try Again</button>
