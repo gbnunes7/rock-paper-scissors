@@ -8,10 +8,10 @@ export default function setWinner(user,machine) {
         (user.toLowerCase() === "scissors" && machine.toLowerCase() === "paper") ||
         (user.toLowerCase() === "paper" && machine.toLowerCase() === "rock") 
     ) {
-        // userScore++
+        
         return "User wins"
     } else {
-        // machineScore++
+    
         return "Machine wins"
     }
 }
