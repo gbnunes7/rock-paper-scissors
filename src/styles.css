@@ -47,3 +47,68 @@ main {
 footer {
     padding: 10px
 }
+
+@media (min-width: 768px) {
+    header {
+        padding: 24px 96px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    section {
+        gap: 64px;
+        margin-top: 40px;
+    }
+
+    section img {
+        width: 10rem;
+    }
+
+    main .results {
+        gap: 16px;
+        font-size: 1.25rem;
+        margin-top: 40px;
+    }
+
+    main .results .choices {
+        gap: 24px;
+    }
+
+    main .results .victory {
+        font-size: 2rem;
+    }
+
+    main .new-game {
+        gap: 48px;
+    }
+
+    main .new-game button {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    footer .score {
+        font-size: 1.25rem;
+    }
+
+    footer .modal h4 {
+        font-size: 2rem;
+    }
+
+    footer .modal ul {
+        font-size: 1.25rem;
+    }
+}
